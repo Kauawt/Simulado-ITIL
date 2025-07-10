@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+Cadastro
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <header class="flex justify-center items-center min-h-screen bg-gray-900 pt-16">
+        <div class="bg-white border border-black rounded-lg p-8 w-full max-w-md mx-auto">
+            <h1 class="font-semibold text-black text-2xl text-left mb-4">CADASTRO</h1>
+                <div class="mb-4">
+                    <input type="text" name="user_name" placeholder="Nome" class="font-bold text-black w-full p-2 border border-black rounded" required>
+                </div>
+                <div class="mb-4">
+                    <input type="text" name="user_email" placeholder="E-mail" class="font-bold text-black w-full p-2 border border-black rounded" required>
+                </div>
+                <div class="mb-4">
+                    <input type="text" name="user_code" placeholder="RA" class="font-bold text-black w-full p-2 border border-black rounded" required maxlength="15">
+                </div>
+                <div class="mb-4">
+                    <input type="password" name="password" placeholder="Senha" class="font-bold text-black w-full p-2 border border-black rounded" required>
+                </div>
+                <div class="mb-4">
+                    <input type="password" name="check_password" placeholder="Confirmar Senha" class="font-bold text-black w-full p-2 border border-black rounded" required>
+                </div>
+                <button type="submit" class="w-full bg-gray-700 text-white py-2 rounded-lg hover:bg-black">Próximo</button>
+        </div>
+    </header>
+
+    <footer class="bg-gray-900 px-1 py-1 ">
+        <ul class="text-white flex justify-between items-center px-3 py-1">
+            <li>&copy; 2025</li>
+            <li>K&A</li>
+        </ul>
+    </footer>
+</body>
+
+{% endblock %}
