@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<header class="flex justify-center items-center min-h-screen bg-gray-900 pt-16">
+    <div class="bg-white border border-black rounded-lg p-8 w-full max-w-md mx-auto">
+        <h1 class="font-semibold text-black text-2xl text-left mb-4">Perfil</h1>
+            <div class="mb-4">
+                <input type="text" name="user_name" value="{{ request.user.nome }}" placeholder="Nome" class="font-bold text-black w-full p-2 border border-black rounded" required>
+            </div>
+            <div class="mb-4">
+                <input type="text" value="{{ request.user.email }}" placeholder="E-mail" class="font-bold text-black w-full p-2 border border-black rounded" disabled>
+            </div>
+            <div class="mb-4">
+                <input type="text" value="{{ request.user.ra }}" placeholder="RA" class="font-bold text-black w-full p-2 border border-black rounded" disabled>
+            </div>
+            <div class="mb-4">
+                <input type="password" name="senha" placeholder="Nova Senha" class="font-bold text-black w-full p-2 border border-black rounded">
+            </div>
+            <div class="mb-4">
+                <input type="password" name="senha_atual" placeholder="Senha Atual" class="font-bold text-black w-full p-2 border border-black rounded" required>
+            </div>
+            <button type="submit" class="w-full bg-gray-700 text-white py-2 rounded-lg hover:bg-black">Atualizar</button>
+    </div>
+</header>
+{% endblock %}
